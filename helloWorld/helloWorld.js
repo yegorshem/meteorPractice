@@ -14,6 +14,13 @@ if (Meteor.isClient) {
       Session.set('counter', Session.get('counter') + 1);
     }
   });
+  
+   Template.goodbye.events({
+    'click button': function () {
+      // decrement the counter when button is clicked
+      Session.set('counter', Session.get('counter') - 1);
+    }
+  });
 }
 
 if (Meteor.isServer) {
